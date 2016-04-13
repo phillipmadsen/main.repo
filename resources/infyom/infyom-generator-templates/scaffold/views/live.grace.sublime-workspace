@@ -1,0 +1,1284 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dev",
+				"devroutes	devRoutes"
+			],
+			[
+				"sc",
+				"scripts"
+			],
+			[
+				"bootform",
+				"bootform	form"
+			],
+			[
+				"Fa",
+				"Factory"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "@extends('frontend/layouts/leftside')\n\n@section('htmlschema')\nitemscope itemtype=\"http://schema.org/Blog\"\n@endsection\n\n@section('seo')\n	<meta name=\"description\" content=\"\">\n	<meta name=\"keywords\" content=\"\">\n	<meta name=\"author\"content=\"The Grace Company\"/>\n@endsection\n\n@section('jsonschema')@endsection\n\n@section('title')@endsection\n\n@section('bodyschema')@endsection\n\n@section('bodytag')\nrows \n@endsection\n\n@section('header_styles')@endsection\n@section('scripts')@endsection\n@section('ppscripts')@endsection\n\n@section('submenu')\n	@include('frontend.pages.hand-quilting.partials.submenu')  \n@endsection\n\n@section('slider')@endsection\n@section('intro')@endsection\n\n@section('page-title')\n<!-- Page Title ============================================= -->\n<section id=\"page-title\">\n	<div class=\"container clearfix\">\n		<h2>Blog</h2>\n		<span>Our Latest News</span>\n		@yield('partial/breadcrumbs', Breadcrumbs::render('blog', $articles))\n	</div>\n</section><!-- #page-title end -->\n\n@endsection\n\n@section('left-sidebar')\n	<!-- Sidebar ============================================= -->\n	<div class=\"sidebar nobottommargin clearfix\">\n		@include('frontend/article/sidebar', array($tags, $categories))\n	</div><!-- .sidebar end -->\n@endsection\n\n@section('blog-content')\n<!-- Post Content ============================================= -->\n<div class=\"postcontent nobottommargin col_last clearfix\">\nthis div is loading\n\n	@foreach($articles as $article)\n	<!-- Posts ============================================= -->\n	<div id=\"posts\" itemscope=\"\" itemtype=\"http://schema.org/BlogPosting\">\n		<div class=\"entry clearfix\">\n			<div class=\"entry-image\">\n			before image\n				@if($article->path)\n				<a href=\"{!! url($article->path . $article->file_name) !!}\" data-lightbox=\"image\">\n					<img class=\"image_fade\" src=\"{!! url($article->path . $article->file_name) !!}\" style=\"border: 1px solid #bdc3c7;\" alt=\"{!! $article->title !!} image\"/>\n				</a>\n				@else\n				<a href=\"{!! asset('/frontend/assets/images/blog_default.png') !!}\" data-lightbox=\"image\">\n					<img class=\"image_fade\" src=\"http://lorempixel.com/800/350/people/?\" style=\"border: 1px solid #bdc3c7;\" alt=\"{!! $article->title !!} image\"/>\n				</a>\n				@endif\n				after image\n			</div>\n			<div class=\"entry-title\">\n				<a href=\"{!! URL::route('dashboard.article.show', array('slug'=>$article->slug)) !!}\">\n					<h1 itemprop=\"name headline\">{!! $article->title !!}</h1>\n				</a>\n			</div>\n			<ul class=\"entry-meta clearfix\">\n				<li><i class=\"icon-calendar3\" datetime=\"{!! $article->created_at !!}\"></i> 10th February 2014</li>\n				<li>\n					<span class=\"byline\"><i class=\"icon-user\"></i>\n						<span itemprop=\"author\" itemscope=\"\" itemtype=\"http://schema.org/Person\">\n							<span itemprop=\"name\">\n								<a href=\"https://plus.google.com/\" itemprop=\"url\" rel=\"author\">\n									The Grace Company\n								</a>\n							</span>\n						</span>\n					</span>\n				</li>\n				<li><i class=\"icon-folder-open\"></i> <a href=\"#\">General</a>, <a href=\"#\">Media</a></li>\n				<li><a href=\"blog-single.html#comments\"><i class=\"icon-comments\"></i> 13 Comments</a></li>\n				<li><a href=\"#\"><i class=\"icon-camera-retro\"></i></a></li>\n			</ul>\n			<div class=\"entry-content content\" itemprop=\"articleBody\">\n				{!! $article->excerpt !!}\n				<br />\n				<br />\n				<a href=\"{!! URL::route('dashboard.article.show', array('slug'=>$article->slug)) !!}\" class=\"more-link\">Read More</a>\n			</div>\n		</div>\n	</div><!-- .posts end -->\n	@endforeach\n	<ul class=\"pagination pagination-lg\">{!! $articles->render() !!}</ul>\n</div><!-- .postcontent end -->\n this div has also ended\n\n@endsection\n\n@section('footer_scripts')@endsection\n@section('pp_footer_scripts')@endsection\n@section('inlinejs')@endsection \nhighcharts/highcharts.js\nhighcharts/exporting.js",
+			"file": "/C/Users/sandbox/AppData/Local/Temp/fz3temp-1/index.blade.php",
+			"file_size": 3711,
+			"file_write_time": 131046074412775961,
+			"settings":
+			{
+				"buffer_size": 3760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 5993,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/create.blade.php",
+			"settings":
+			{
+				"buffer_size": 3358,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "create.stub",
+			"settings":
+			{
+				"buffer_size": 2593,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "@extends('admin.layouts.clip')\n\n@section('htmlschema')@endsection\n@section('seo')@endsection\n@section('jsonschema')@endsection\n@section('title', 'Grace Management Console')\nUpdate $MODEL_NAME$\n@endsection\n\n@section('ppstyle')@endsection\n@section('scripts')@endsection\n\n@section('pp_header_scripts')@endsection\n@section('bodytag')@endsection\n@section('bodyschema')@endsection\n\n@section('page-title')\nEdit $MODEL_NAME$\n@endsection\n\n@section('sidebar')@endsection\n@section('widgets')@endsection\n\n@section('content')\n<div class=\"container\" style=\"min-height: 821px;\">\n    <div class=\"row\">\n        <div class=\"col-sm-12\">\n            <div class=\"panel panel-default\">\n            <div class=\"panel-heading\"> <i class=\"fa fa-reorder\"></i>\n            $MODEL_NAME$ Panel\n            </div>\n            <div class=\"panel-body\">\n            @include('core-templates::common.errors')\n            {!! Form::model($$MODEL_NAME_CAMEL$, ['route' => ['$ROUTES_AS_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->id], 'method' => 'patch']) !!}\n            @include('$ROUTES_AS_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.fields')\n            {!! Form::close() !!}\n            </div>\n            </div>\n        </div>\n    </div>\n</div>\n@endsection\n\n@section('after-content')@endsection\n\n@section('footer_scripts')@endsection\n@section('pp_footer_scripts')@endsection\n@section('inlinejs')@endsection\n@section('ppinline')@endsection\n",
+			"file": "edit.stub",
+			"file_size": 632,
+			"file_write_time": 131049599797900161,
+			"settings":
+			{
+				"buffer_size": 1417,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "@extends('admin.layouts.clip')\n\n@section('htmlschema')@endsection\n\n@section('seo')@endsection\n\n@section('jsonschema')@endsection\n\n@section('title', 'Grace Management Console')\n$MODEL_NAME_PLURAL$\n@endsection\n\n@section('ppstyle')@endsection\n\n@section('scripts')@endsection\n\n@section('pp_header_scripts')@endsection\n\n@section('bodytag')@endsection\n\n@section('bodyschema')@endsection\n\n@section('page-title')\n$MODEL_NAME_PLURAL$\n@endsection\n@section('pt-small')@endsection\n\n@section('sidebar')@endsection\n\n@section('widgets')@endsection\n\n@section('content')\n\n<div class=\"container\" style=\"min-height: 821px;\">\n\n    <!-- start: PAGE CONTENT -->\n    <div class=\"row\">\n        <div class=\"col-sm-12\">\n            <!-- start: PANLEL TABS -->\n            <div class=\"panel panel-default\">\n                <div class=\"panel-heading\"> <i class=\"fa fa-reorder\"></i>\n                  $MODEL_NAME$ Panel\n                </div>\n                <div class=\"panel-body\">\n\n        <h1 class=\"pull-left\">$MODEL_NAME_PLURAL$</h1>\n        <a class=\"btn btn-primary pull-right\" style=\"margin-top: 25px\" href=\"{!! route('$ROUTES_AS_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') !!}\">Add New</a>\n\n        <div class=\"clearfix\"></div>\n\n        @include('flash::message')\n\n        <div class=\"clearfix\"></div>\n\n        @if($$MODEL_NAME_PLURAL_CAMEL$->isEmpty())\n            <div class=\"well text-center\">No $MODEL_NAME_PLURAL$ found.</div>\n        @else\n            @include('$ROUTES_AS_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.table')\n        @endif\n        $PAGINATE$\n    </div>\n@endsection\n\n@section('after-content')@endsection\n\n@section('footer_scripts')@endsection\n\n@section('pp_footer_scripts')@endsection\n\n@section('inlinejs')@endsection\n\n@section('ppinline')@endsection",
+			"file": "index.stub",
+			"file_size": 681,
+			"file_write_time": 131049599789436351,
+			"settings":
+			{
+				"buffer_size": 1740,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "show.stub",
+			"settings":
+			{
+				"buffer_size": 814,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 398.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"format",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"jsformat",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"sublimelog",
+				"SublimeLog: Toggle logger (on/off)"
+			],
+			[
+				"debug",
+				"Logging: Level = DEBUG"
+			],
+			[
+				"",
+				"Changelog"
+			],
+			[
+				"logging",
+				"Logging: Enable logging"
+			],
+			[
+				"html",
+				"HTMLPrettify: Set `node` Path"
+			],
+			[
+				"forma",
+				"phpfmt: format now"
+			],
+			[
+				"route",
+				"Snippet: RoutesRoutes"
+			],
+			[
+				"foramt",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"routes",
+				"Snippet: RoutesRoutes"
+			],
+			[
+				"project",
+				"STProjectMaker: Create project"
+			],
+			[
+				"formta",
+				"phpfmt: format now"
+			],
+			[
+				"phpfmt",
+				"phpfmt: toggle format on save"
+			],
+			[
+				"f",
+				"phpfmt: format now"
+			],
+			[
+				"toggle linter",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"json",
+				"Pretty JSON: Minify (compress) JSON"
+			],
+			[
+				"toggle",
+				"phpfmt: toggle additional transformations"
+			],
+			[
+				"blank",
+				"Trimmer: Remove blank spaces."
+			],
+			[
+				"phpfmt toggle",
+				"phpfmt: toggle additional transformations"
+			],
+			[
+				"phpfmt enabl",
+				"phpfmt: enable/disable additional transformations"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Form::",
+				"Snippet: Form::textfield"
+			],
+			[
+				"form",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"pretty",
+				"Pretty JSON: JSON query with ./jq"
+			],
+			[
+				" ",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"beur",
+				"PHP CodeBeautifier"
+			]
+		],
+		"width": 910.0
+	},
+	"console":
+	{
+		"height": 294.0,
+		"history":
+		[
+			"sublime.log_commands(True)",
+			"sublime.settings(JsFormat)",
+			"jsformat.settings()",
+			"sublime.settings(True)",
+			"sublime.settings()",
+			"sublime.log_result_regex(True)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(true)",
+			"sublime.log_commands()",
+			"sublime.log_commands(flag)",
+			"log_commands(flag)",
+			"sublime.packages_path()",
+			"sublime.windows()",
+			"windows()",
+			"sublime.DIALOG_YES",
+			"sublime.active_window()",
+			"sublime.window()",
+			"sublime.active_window().run_command(\"show_panel\", {\"panel\": \"console\", \"toggle\": True})",
+			"sublime.log_commands(True)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/G/A_LOCAL/grace/local.live.grace",
+		"/G/A_LOCAL/grace/local.live.grace/resources",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/admin",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/admin/layouts",
+		"/G/A_LOCAL/grace/local.live.grace/resources/infyom/infyom-generator-templates/scaffold/views"
+	],
+	"file_history":
+	[
+		"/G/Desktop/TEMPLATES/temprar/Rar$DIa0.487/routes.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/admin/dashboard.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/app/Http/Controllers/Auth/AuthController.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/layouts/slider.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/vendor/infyomlabs/core-templates/templates/scaffold/fields/radio_group.stub",
+		"/G/A_LOCAL/grace/local.test.cart/vendor/infyomlabs/core-templates/templates/scaffold/fields/radio.stub",
+		"/G/A_LOCAL/grace/local.test.cart/app/Helper/helpers.php",
+		"/G/Desktop/blank.clip.php",
+		"/G/Desktop/blank/edit.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/layouts/canvas.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/layout/clip.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/admin/layouts/partials/chat-sidebar.blade.php",
+		"/G/Desktop/TEMPLATES/temprar/Rar$DRa0.456/resources/views/backend/layout/dashboard.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/.env",
+		"/G/A_LOCAL/grace/local.live.grace/composer.json",
+		"/G/A_LOCAL/grace/local.live.grace/config/app.php",
+		"/G/A_LOCAL/grace/local.live.grace/app/Http/dev_routes.php",
+		"/G/A_LOCAL/grace/local.live.grace/app/Http/routes.php",
+		"/G/Desktop/TEMPLATES/temprar/Rar$DIa0.965/composer.json",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/layouts/homepage.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/admin/layouts/partials/dashboard/section-four.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/layouts/canvas-shop.blade.php",
+		"/C/Users/sandbox/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/sandbox/AppData/Roaming/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/layouts/menu.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/views/layouts/canvas-blog.blade.php",
+		"/G/A_LOCAL/grace/local.start/resources/views/layouts/dashboard.blade.php",
+		"/G/A_LOCAL/grace/local.start/resources/views/layouts/partials/dashboard.blade.php",
+		"/G/A_LOCAL/grace/local.live.grace/app/Providers/ConfigServiceProvider.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/layout/clippanel.blade.php",
+		"/G/A_LOCAL/versionedwp/nextgen/app/Http/routes.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Http/developer_routes.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Http/Middleware/MenuMiddleware.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Models/Menu.php",
+		"/G/Desktop/fullycms-master/resources/views/backend/menu/index.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/edit.blade.php",
+		"/G/Desktop/TEMPLATES/temprar/Rar$DRa0.648/.env",
+		"/G/A_LOCAL/grace/local.live.grace/app/Http/Kernel.php",
+		"/G/A_LOCAL/grace/local.live.grace/resources/infyom/infyom-generator-templates/scaffold/views/create.stub",
+		"/G/A_LOCAL/grace/local.live.grace/app/Providers/RouteServiceProvider.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Http/api_routes.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/fields.blade.php",
+		"/G/[affordable]/[code]/moduel concept.json",
+		"/G/A_LOCAL/versionedwp/local.support/composer.json",
+		"/G/A_LOCAL/versionedwp/nextgen/.env",
+		"/G/A_LOCAL/versionedwp/local.support/.pm/attachments.txt",
+		"/G/A_LOCAL/grace/local.test.cart/app/Http/Controllers/Admin/UserController.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Http/routes.php",
+		"/C/Users/sandbox/AppData/Local/Temp/fz3temp-1/3functions.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/table.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/infyom/infyom-generator-templates/scaffold/views/index.stub",
+		"/G/A_LOCAL/grace/local.test.cart/resources/infyom/infyom-generator-templates/scaffold/views/edit.stub",
+		"/G/A_LOCAL/grace/local.test.cart/resources/infyom/infyom-generator-templates/scaffold/views/fields.stub",
+		"/G/A_LOCAL/grace/local.test.cart/resources/infyom/infyom-generator-templates/scaffold/views/create.stub",
+		"/G/A_LOCAL/grace/local.test.cart/resources/infyom/infyom-generator-templates/scaffold/views/show_field.stub",
+		"/G/A_LOCAL/grace/local.test.cart/resources/infyom/infyom-generator-templates/scaffold/views/show.stub",
+		"/G/A_LOCAL/versionedwp/nextgen/app/Repositories/CallRepository.php",
+		"/G/A_LOCAL/versionedwp/nextgen/app/Models/Product.php",
+		"/G/A_LOCAL/versionedwp/local.support/app/Http/Controllers/InstallController.php",
+		"/G/A_LOCAL/versionedwp/local.support/app/User.php",
+		"/G/A_LOCAL/grace/local.image/app/Modules/Helpdesk/Database/Migrations/2016_04_11_220356_create_todos_table.php",
+		"/G/Desktop/database/migrations/2016_04_11_213609_create_activity_log_table.php",
+		"/G/Desktop/database/migrations/2016_04_11_220356_create_activity_log_table.php",
+		"/G/A_LOCAL/grace/local.image/app/Modules/Helpdesk/Database/Migrations/2016_04_11_220356_create_forum_categories_table.php",
+		"/G/A_LOCAL/grace/local.image/app/Modules/Helpdesk/Database/Migrations/2016_04_11_220358_add_foreign_keys_to_todos_table.php",
+		"/G/A_LOCAL/versionedwp/local.support/.env",
+		"/G/A_LOCAL/versionedwp/local.support/resources/model_schemas/Attachments.json",
+		"/G/A_LOCAL/versionedwp/local.support/database/migrations/2016_04_11_213609_create_activity_log_table.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Models/Category.php",
+		"/G/A_LOCAL/versionedwp/local.support/vendor/classpreloader/classpreloader/composer.json",
+		"/C/Users/sandbox/.homestead/Homestead.yaml",
+		"/G/A_LOCAL/grace/local.test.cart/app/Http/route_model_binding_file.php",
+		"/G/A_LOCAL/grace/local.image/tests/MenuApiTest.php",
+		"/G/A_LOCAL/grace/local.image/tests/ApiTestTrait.php",
+		"/G/A_LOCAL/grace/local.test.cart/public/backend/assets/css/main.css",
+		"/G/A_LOCAL/grace/module.maker/database/migrations/2016_02_23_170025_create_menus_table.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/confirm-destroy.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/create.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/layout/dashboard.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/developer/layout/pixit2.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/developer/layout/partials/head.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/developer/layout/pixit.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Providers/ComposerServiceProvider.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/developer/layout/partials/topbar.blade.php",
+		"/C/Users/sandbox/AppData/Local/Temp/fz3temp-1/sidebar.blade.php",
+		"/C/Users/sandbox/AppData/Local/Temp/fz3temp-1/admin.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/layout/partials/menu/adminsidebar.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/developer/layout/pixitpanel.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/app/Composers/Developer/MenuComposer.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/developer/layout/partials/main-sidebar.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/developer/layout/partials/chat.blade.php",
+		"/C/Users/sandbox/AppData/Roaming/Sublime Text 3/Packages/JsFormat/Default (Windows).sublime-keymap",
+		"/C/Users/sandbox/AppData/Roaming/Sublime Text 3/Packages/JsFormat/JsFormat.sublime-settings",
+		"/C/Users/sandbox/AppData/Roaming/Sublime Text 3/Packages/User/JsFormat.sublime-settings",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/layout/partials/dashboard.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/layout/partials/sidebar/admin.blade.php",
+		"/C/Users/sandbox/AppData/Local/Temp/fz3temp-1/navbar.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/backend/layout/partials/menu/admin_items.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/frontend/layout/partials/footer/footer-widgets.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/frontend/layout/canvas.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/frontend/layout/homepage.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/frontend/layout/menu.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/database/migrations/2016_04_08_141340_create_table_files.php",
+		"/G/A_LOCAL/grace/local.test.cart/public/frontend/style.css",
+		"/G/A_LOCAL/grace/local.test.cart/public/frontend/custom-css/custom.css",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/frontend/layout/partials/header/header.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/resources/views/frontend/layout/partials/header/top-bar.blade.php",
+		"/G/A_LOCAL/grace/local.test.cart/vendor/infyomlabs/laravel-generator/src/Commands/APIScaffoldGeneratorCommand.php",
+		"/G/Desktop/backendl5-master/app/Composers/RouteComposer.php",
+		"/G/Desktop/backendl5-master/app/Exceptions/Handler.php",
+		"/G/Desktop/backendl5-master/app/Providers/AppServiceProvider.php",
+		"/G/Desktop/backendl5-master/app/Providers/ComposerServiceProvider.php",
+		"/G/Desktop/backendl5-master/app/Providers/RouteServiceProvider.php",
+		"/G/Desktop/backendl5-master/app/Providers/EventServiceProvider.php",
+		"/G/Desktop/backendl5-master/app/Providers/AuthServiceProvider.php",
+		"/G/Desktop/backendl5-master/app/Composers/MenusComposer.php",
+		"/G/Desktop/backendl5-master/config/custom.php",
+		"/G/Desktop/backendl5-master/artisan",
+		"/G/Desktop/backendl5-master/config/menus.php",
+		"/G/Desktop/backendl5-master/app/Utils/helpers.php",
+		"/G/Desktop/backendl5-master/app/Console/Commands/ApiControllerMakeCommand.php",
+		"/G/Desktop/backendl5-master/app/Console/Commands/AllMakeCommand.php",
+		"/G/Desktop/backendl5-master/app/Console/Commands/CustomGeneratorCommand.php",
+		"/G/Desktop/backendl5-master/app/Console/Commands/FormMakeCommand.php",
+		"/G/Desktop/backendl5-master/app/Console/Commands/AdminControllerMakeCommand.php",
+		"/G/A_LOCAL/grace/local.test.cart/server.php",
+		"/G/Desktop/backendl5-master/app/Console/Commands/RequestMakeCommand.php",
+		"/G/Desktop/backendl5-master/app/Console/Commands/ViewsControllerMakeCommand.php"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 177.0,
+		"where_history":
+		[
+			"G:\\A_LOCAL\\grace\\local.live.grace\\resources\\infyom\\infyom-generator-templates\\scaffold\\views",
+			"G:\\A_LOCAL\\grace\\local.test.cart",
+			"G:\\A_LOCAL\\grace\\local.live.grace\\*",
+			"G:\\A_LOCAL\\grace\\local.live.grace",
+			"G:\\A_LOCAL\\grace\\local.image",
+			"<project>,G:\\A_LOCAL\\grace\\nude"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"@extends('layouts.app')",
+			"frontend.",
+			".",
+			"'Admin.",
+			"Admin",
+			" && no && no &&",
+			" --save",
+			"  , ",
+			"`",
+			"     \n",
+			"//",
+			"route",
+			"backend",
+			"//",
+			"partials",
+			"{!! asset('",
+			"url",
+			"Admin",
+			"(?<=script src=\\\")(.*?)(?=\\\")",
+			"(?<=\\\")(.*?)(?=\\\":\")",
+			"backend",
+			"layout.partials.partials",
+			"frontend/images/logo.png",
+			"*frontend/images/logo.png*",
+			"frontend/images/logo.png",
+			"true",
+			"{!! HTML::script('",
+			"@",
+			"{!! HTML::style('",
+			"$",
+			"yield",
+			"url",
+			"@extends('frontend/layout/layout",
+			"@extends('frontend/layout/layout')",
+			"frontend.layouts.",
+			"frontend.layouts",
+			"@extends('frontend/layout/layout')",
+			"@extends('backend/layout/layout')",
+			"@include('layouts.partials.",
+			"* @author Sefa Karagöz <karagozsefa@gmail.com>",
+			"Sefa Karagöz <karagozsefa@gmail.com>",
+			"Sefa Karagöz",
+			"Sefa Karagöz <karagozsefa@gmail.com>",
+			"fully",
+			"Fully\\",
+			"@stop",
+			"AdminMenuComposer.php",
+			"Fully",
+			"App",
+			"adminmenu",
+			"\"flip-3d\"",
+			"3rem",
+			"1rem",
+			" rem",
+			"null",
+			"jeg_init_script",
+			"jeg_register_script",
+			"jeg",
+			"true",
+			"register",
+			"my_included_file.php",
+			"wpmu",
+			"enqueue",
+			"/admin",
+			",255",
+			"}",
+			" <",
+			"false",
+			";\n",
+			"coupon",
+			"price",
+			"number",
+			"\"inIndex\": true",
+			"product",
+			"Sefa Karagöz <karagozsefa@gmail.com>",
+			"Fully",
+			"AuController.php",
+			"menu",
+			"navigation",
+			"active",
+			"refresh fa-spin ",
+			"/",
+			"Sefa Karagöz <karagozsefa@gmail.com>",
+			"dashboard",
+			"frontend",
+			"homepage.",
+			"Sefa Karagöz",
+			"dashboard",
+			"}}",
+			"{{",
+			"//",
+			"checkbox:yes",
+			"checkbox:true",
+			"xdebug",
+			"phpcs",
+			"preffix",
+			"include",
+			"asset",
+			"$",
+			"string",
+			"', '",
+			"App\\",
+			"//",
+			"”",
+			"“",
+			"local.init",
+			"appfactory",
+			"dev",
+			"Dev",
+			"Developer",
+			".$ROUTES_AS_PREFIX$",
+			"blog",
+			"string",
+			"\\{[^}]*\\}",
+			"nullable",
+			"use_",
+			"$v",
+			"Use ",
+			"layouts",
+			"include('layouts",
+			"false",
+			"\"primary\": false",
+			"\"primary\": true",
+			"\",",
+			"project",
+			"@include('layouts",
+			"nullable",
+			"//"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"@extends('admin.layouts.clip')",
+			"@extends('layouts.app')",
+			"@extends('frontend/layout/canvas",
+			"@extends('frontend/layout/canvas')",
+			"frontend.layout.",
+			"@extends('frontend/layout/canvas')",
+			"@extends('backend/layout/clip')",
+			"@include('backend.layout.partials.",
+			"* @author Phillip Madsen <contact@affordableprogrammer.com>",
+			"Phillip Madsen <contact@affordableprogrammer.com>",
+			"App\\",
+			"@endsection",
+			"Phillip Madsen",
+			"App",
+			"Phillip Madsen",
+			"Config::get('auth.providers.users.model')",
+			"Shop",
+			"shop",
+			"Config::get('auth.providers.users.model')"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/sandbox/AppData/Local/Temp/fz3temp-1/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3760,
+								3599
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
+							"is_xml": false,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/User/laravel-blade.tmLanguage",
+							"syntax_mgr_loaded": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"apply_syntax_touched": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
+							"is_xml": false,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/User/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2394.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/G/A_LOCAL/grace/local.test.cart/resources/views/backend/menu/create.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								864,
+								864
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"apply_syntax_touched": true,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
+							"is_xml": false,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/User/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "create.stub",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2394,
+								2259
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"apply_syntax_touched": true,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/User/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "edit.stub",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1204,
+								1204
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"apply_syntax_touched": true,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/User/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 570.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "index.stub",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								954,
+								954
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"apply_syntax_touched": true,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/User/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "show.stub",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								180
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"apply_syntax_touched": true,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/User/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GoSublime-output":
+	{
+		"height": 118.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 118.0
+	},
+	"output.exec":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.paneltranformations":
+	{
+		"height": 136.0
+	},
+	"pinned_build_system": "Packages/User/BLADE.PHP.sublime-build",
+	"project": "live.grace.sublime-project",
+	"replace":
+	{
+		"height": 90.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 306.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

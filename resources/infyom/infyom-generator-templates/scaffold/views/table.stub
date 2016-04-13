@@ -1,0 +1,36 @@
+<table class="table table-responsive table-striped table-bordered table-hover table-full-width">
+    <thead>
+        <th>View</th>
+        $FIELD_HEADERS$
+        <th colspan="3">Action</th>
+        {{--   $product->created_at->format('m-d-Y')
+<td>
+    @  if ($product->status =='Online')
+    <span class="label label-success w-300">{  $product->status !!}</span>
+    @  elseif ($product->status =='Offline')
+    <span class="label label-dark w-300">{  $product->status !!}</span>
+    @  elseif ($product->status =='Removed')
+    <span class="label label-danger w-300">{  $product->status !!}</span>
+    @  else
+    <span class="label  w-300">{  $product->status !!}</span>
+    @  endif
+</td> --}}
+    </thead>
+    <tbody>
+    @foreach($$MODEL_NAME_PLURAL_CAMEL$ as $$MODEL_NAME_CAMEL$)
+        <tr>
+        <td> <a href="{!! url('/$ROUTES_PREFIX$$MODEL_NAME_PLURAL_CAMEL$/show', [$$MODEL_NAME_CAMEL$->id]) !!}" class='btn btn-default btn-xs'><i class="fa fa-eye"></i></a></td>
+            $FIELD_BODY$
+            <td>
+                {!! Form::open(['url' => ['/$ROUTES_PREFIX$$MODEL_NAME_PLURAL_CAMEL$/destroy', $$MODEL_NAME_CAMEL$->id], 'method' => 'delete']) !!}
+                <div class='btn-group'>
+
+                    <a href="{!! url('/$ROUTES_PREFIX$$MODEL_NAME_PLURAL_CAMEL$/edit', [$$MODEL_NAME_CAMEL$->id]) !!}" class='btn btn-default btn-xs'><i class="fa fa-pencil"></i></a>
+                    {!! Form::button('<i class="fa fa-times-circle"></i> &nbsp; Remove', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                </div>
+                {!! Form::close() !!}
+            </td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>

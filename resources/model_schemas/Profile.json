@@ -1,0 +1,388 @@
+[
+  {
+    "fieldInput": "id:increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": true
+  },
+  
+    {
+        "fieldInput": "pic:string", 
+        "htmlType": "file",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "display_name:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "slug:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "position:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "supervisor:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "employment_title:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "employment_role:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "employment_status:string",
+        "htmlType": "select:Active,LaidOff,OnContract,Dismissed,OnBreak,Maternity Leave, Workers Comp",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "phone:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "phone_type:string",
+        "htmlType": "select:Home,Mobile,Work,Office,Other",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "website:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "company:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "gender:string",
+        "htmlType": "checkbox:Male,Female",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "about_me:text",
+        "htmlType": "textarea",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "note:text",
+        "htmlType": "textarea",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "skypeid:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "githubid:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "twitter_username:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "instagram_username:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "facebook_username:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "linked_in_url:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "google_plus_url:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "facebook_url:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "user_api_key:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "user_api_secret:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "user_activation_key:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "activation_code_id:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "activation_code:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "confirmation_code:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+
+    {
+        "fieldInput": "confirmed:boolean",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "activated:boolean",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "published:boolean",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "is_employee:boolean",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "is_public:boolean",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "is_fake:boolean",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "is_active:boolean",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "birth_date:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "dob_month:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "dob_day:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "dob_year:string",
+        "htmlType": "text",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "profile_activated_on:dateTime",
+        "htmlType": "date",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "activated_on:dateTime",
+        "htmlType": "date",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "published_on:dateTime",
+        "htmlType": "date",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "deleted_at:dateTime",
+        "htmlType": "date",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "user_id:integer:unsigned",
+        "htmlType": "number",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "created_at:dateTime",
+        "htmlType": "date",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    },
+    {
+        "fieldInput": "updated_at:dateTime",
+        "htmlType": "date",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false
+    }
+]

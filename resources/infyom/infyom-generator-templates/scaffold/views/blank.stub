@@ -1,0 +1,51 @@
+@extends('admin.layouts.clip')
+
+@section('htmlschema')@endsection
+@section('seo')@endsection
+@section('jsonschema')@endsection
+@section('title')
+Create New $MODEL_NAME$
+@endsection
+
+@section('ppstyle')@endsection
+@section('scripts')@endsection
+
+@section('pp_header_scripts')@endsection
+@section('bodytag')@endsection
+@section('bodyschema')@endsection
+
+@section('page-title')
+Edit $MODEL_NAME$
+@endsection
+
+@section('sidebar')@endsection
+@section('widgets')@endsection
+
+@section('content')
+<div class="container" style="min-height: 821px;">
+    <!-- start: PAGE CONTENT -->
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- start: PANLEL TABS -->
+            <div class="panel panel-default">
+                <div class="panel-heading"> <i class="fa fa-reorder"></i>
+                    $MODEL_NAME$ Panel
+                </div>
+                <div class="panel-body">
+
+
+                </div>
+            </div>
+            <!-- end: PANLEL TABS --> </div>
+    </div>
+
+    <!-- end: PAGE CONTENT-->
+</div>
+@endsection
+
+@section('after-content')@endsection
+
+@section('footer_scripts')@endsection
+@section('pp_footer_scripts')@endsection
+@section('inlinejs')@endsection
+@section('ppinline')@endsection

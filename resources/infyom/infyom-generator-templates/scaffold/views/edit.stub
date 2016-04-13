@@ -1,0 +1,57 @@
+@extends('$ROUTES_AS_PREFIX$layout.clip')
+
+@section('htmlschema')@endsection
+@section('seo')@endsection
+@section('jsonschema')@endsection
+
+@section('title')
+Update $MODEL_NAME$
+@endsection
+
+@section('ppstyle')@endsection
+@section('scripts')@endsection
+
+@section('pp_header_scripts')@endsection
+@section('bodytag')@endsection
+@section('bodyschema')@endsection
+
+@section('page-title')
+Edit $MODEL_NAME$
+@endsection
+
+@section('sidebar')@endsection
+@section('widgets')@endsection
+
+@section('content')
+<div class="container" style="min-height: 821px;">
+    <!-- start: PAGE CONTENT -->
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- start: PANLEL TABS -->
+            <div class="panel panel-default">
+                <div class="panel-heading"> <i class="fa fa-reorder"></i>
+                    $MODEL_NAME$ Panel
+                </div>
+                <div class="panel-body">
+
+                    @include('core-templates::common.errors')
+
+                    {!! Form::model($$MODEL_NAME_CAMEL$, ['url' => ['/$ROUTES_PREFIX$$MODEL_NAME_PLURAL_CAMEL$/update', $$MODEL_NAME_CAMEL$->id], 'method' => 'patch']) !!}
+                    @include('$ROUTES_AS_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.fields')
+                    {!! Form::close() !!}
+                </div>
+            </div>
+            <!-- end: PANLEL TABS --> </div>
+    </div>
+
+    <!-- end: PAGE CONTENT-->
+</div>
+@endsection
+
+@section('after-content')@endsection
+
+@section('footer_scripts')@endsection
+@section('pp_footer_scripts')@endsection
+@section('inlinejs')@endsection
+@section('ppinline')@endsection
+@section('clipinline')@endsection

@@ -1,0 +1,36 @@
+@extends('$ROUTES_AS_PREFIX$layout.clip')
+
+@section('htmlschema')@endsection
+@section('seo')@endsection
+@section('jsonschema')@endsection
+@section('title')
+Preview $MODEL_NAME$
+@endsection
+
+@section('ppstyle')@endsection
+@section('scripts')@endsection
+
+@section('pp_header_scripts')@endsection
+@section('bodytag')@endsection
+@section('bodyschema')@endsection
+
+@section('page-title')
+Preview $MODEL_NAME$
+@endsection
+
+@section('sidebar')@endsection
+@section('widgets')@endsection
+
+@section('content')
+<div class="container">
+    @include('$ROUTES_AS_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show_fields')
+</div>
+@endsection
+
+@section('after-content')@endsection
+
+@section('footer_scripts')@endsection
+@section('pp_footer_scripts')@endsection
+@section('inlinejs')@endsection
+@section('ppinline')@endsection
+@section('clipinline')@endsection

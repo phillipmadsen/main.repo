@@ -1,0 +1,74 @@
+@extends('$ROUTES_AS_PREFIX$layouts.clip')
+
+@section('htmlschema')@endsection
+
+@section('seo')@endsection
+
+@section('jsonschema')@endsection
+
+@section('title')
+$MODEL_NAME_PLURAL$
+@endsection
+
+@section('ppstyle')@endsection
+
+@section('scripts')@endsection
+
+
+@section('pp_header_scripts')@endsection
+
+@section('bodytag')@endsection
+
+@section('bodyschema')@endsection
+
+@section('page-title')
+$MODEL_NAME_PLURAL$
+@endsection
+
+@section('sidebar')@endsection
+
+@section('widgets')@endsection
+
+@section('content')
+<div class="container" style="min-height: 821px;">
+    <!-- start: PAGE CONTENT -->
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- start: PANLEL TABS -->
+            <div class="panel panel-default">
+                <div class="panel-heading"> <i class="fa fa-reorder"></i>
+                    $MODEL_NAME_PLURAL$ Panel
+                </div>
+                <div class="panel-body">
+                    <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! url('/$ROUTES_PREFIX$$MODEL_NAME_PLURAL_CAMEL$/create') !!}">Add New</a>
+                    <div class="clearfix"></div>
+
+                    @include('flash::message')
+
+                    <div class="clearfix"></div>
+                    @if($$MODEL_NAME_PLURAL_CAMEL$->isEmpty())
+                    <div class="well text-center">No $MODEL_NAME_PLURAL$ found.</div>
+                    @else
+                    @include('$ROUTES_AS_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.table')
+                    @endif
+                    $PAGINATE$
+                </div>
+            </div>
+            <!-- end: PANLEL TABS --> </div>
+    </div>
+
+    <!-- end: PAGE CONTENT-->
+</div>
+@endsection
+
+@section('after-content')@endsection
+
+@section('footer_scripts')@endsection
+
+@section('pp_footer_scripts')@endsection
+
+@section('inlinejs')@endsection
+
+@section('ppinline')@endsection
+
+@section('clipinline')@endsection
