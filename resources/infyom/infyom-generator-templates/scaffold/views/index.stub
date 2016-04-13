@@ -10,7 +10,7 @@
 $MODEL_NAME_PLURAL$
 @endsection
 
-@section('ppstyle')@endsection
+
 
 @section('scripts')@endsection
 
@@ -21,8 +21,12 @@ $MODEL_NAME_PLURAL$
 
 @section('bodyschema')@endsection
 
-@section('page-title')
+@section('pagetitle')
 $MODEL_NAME_PLURAL$
+@endsection
+
+@section('ptsmall')
+
 @endsection
 
 @section('sidebar')@endsection

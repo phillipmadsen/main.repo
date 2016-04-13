@@ -10,7 +10,7 @@
 Articles
 @endsection
 
-@section('ppstyle')@endsection
+
 
 @section('scripts')@endsection
 
@@ -21,8 +21,12 @@ Articles
 
 @section('bodyschema')@endsection
 
-@section('page-title')
+@section('pagetitle')
 Articles
+@endsection
+
+@section('ptsmall')
+
 @endsection
 
 @section('sidebar')@endsection

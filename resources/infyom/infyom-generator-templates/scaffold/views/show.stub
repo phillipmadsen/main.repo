@@ -14,10 +14,11 @@ Preview $MODEL_NAME$
 @section('bodytag')@endsection
 @section('bodyschema')@endsection
 
-@section('page-title')
+@section('pagetitle')
 Preview $MODEL_NAME$
 @endsection
 
+@section('ptsmall')@endsection
 @section('sidebar')@endsection
 @section('widgets')@endsection
 

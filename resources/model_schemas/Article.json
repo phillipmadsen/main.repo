@@ -24,7 +24,7 @@
         "primary": false
     },
     {
-        "fieldInput": "is_draft:boolean:default,0",
+        "fieldInput": "is_draft:boolean",
         "htmlType": "boolean",
         "validations": "",
         "searchable": false,
@@ -186,14 +186,6 @@
     },
     {
         "fieldInput": "updated_at:dateTime",
-        "htmlType": "date",
-        "validations": "",
-        "searchable": false,
-        "fillable": true,
-        "primary": false
-    }
-        {
-        "fieldInput": "deleted_at:dateTime",
         "htmlType": "date",
         "validations": "",
         "searchable": false,

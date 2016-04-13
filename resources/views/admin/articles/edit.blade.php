@@ -15,10 +15,11 @@ Update Article
 @section('bodytag')@endsection
 @section('bodyschema')@endsection
 
-@section('page-title')
+@section('pagetitle')
 Edit Article
 @endsection
 
+@section('ptsmall')@endsection
 @section('sidebar')@endsection
 @section('widgets')@endsection
 
