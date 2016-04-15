@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+php artisan infyom:api_scaffold Article --fieldsFile='resources/model_schemas/Article.json' --prefix=admin
+
+
+php artisan infyom:api_scaffold Product --fieldsFile='resources/model_schemas/Product.json' --prefix=admin
